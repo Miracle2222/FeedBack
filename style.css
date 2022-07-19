@@ -1,0 +1,111 @@
+body {
+    background-color: #f8f8f8;
+}
+
+span {
+    color: red;
+    font-weight: 700;
+}
+
+.page {
+    padding-left: 160px;
+}
+
+.client,
+.appeal {
+    display: inline-block;
+}
+
+.client {
+    vertical-align: top;
+    margin-right: 60px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: #606778;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+input {
+    border: 1px solid rgb(186 187 188);
+    border-radius: 2px;
+    padding: 8px 9px;
+    width: 500px;
+    height: 22px;
+
+}
+
+input:focus,
+input:active,
+input:hover {
+    outline: none;
+    border-color: aquamarine;
+    box-shadow: 0 0 15px rgb(186 187 188);
+}
+
+
+.form__input._error {
+    box-shadow: 0 0 15px red;
+}
+
+select {
+    border: 1px solid rgb(186 187 188);
+    border-radius: 2px;
+    padding: 8px 9px;
+    width: 520px;
+}
+
+select:active, select:focus, select:hover {
+    outline: none;
+    border-color: aquamarine;
+}
+
+.page_form {
+    margin-bottom: 13px;
+}
+
+.form_btn {
+    width: 1110px;
+}
+
+textarea {
+    width: 500px;
+    height: 200px;
+    border-radius: 2px;
+}
+
+textarea:active,
+textarea:focus,
+textarea:hover {
+    outline: none;
+    border-color: aquamarine;
+}
+
+
+.btn {
+    display: block;
+    float: right;
+    margin-top: 27px;
+    width: 200px;
+    height: 38px;
+    border: 1px solid #2ac1a0;
+    background-color: transparent;
+    text-align: center;
+    font-weight: 400;
+    font-family: "ITCFranklinGothicW10-Bk 862339", arial, sans-serif;
+    font-size: 15px;
+    color: #2ac1a0;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:focus,
+.btn:active {
+    background-color: rgb(206, 221, 235);
+    cursor: pointer;
+}

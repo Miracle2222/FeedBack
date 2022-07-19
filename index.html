@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Прием обращения граждан</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+    <div class="form">
+        <form action="" id="form" class="form__body">
+            <h1>Отправить жалобу</h1>
+            <p>Поля, отмеченные <span>*</span>, являются обязательными</p>
+            <div class="client">
+                <div class="page_form">
+                    <label for="">Фамилия <span>*</span></label>
+                    <input type="text" class="_surname _req form__input" placeholder="Введите фамилию"/>
+                </div>
+                <div class="page_form">
+                    <label for="">Имя <span>*</span></label>
+                    <input class="_req form__input _name" type="text" placeholder="Введите имя"/>
+                </div>
+                <div class="page_form">
+                    <label for="">Отчество (при наличии)</label>
+                    <input type="text" placeholder="Введите отчество"/>
+                </div>
+                <div class="page_form">
+                    <label for="">Дата рождения <span>*</span></label>
+                    <input class="_req form__input _age " type="date" placeholder="Введите год рождения"/>
+                </div>
+                <div class="page_form">
+                    <label for="">Адрес электронной почты <span>*</span> </label>
+                    <input class="_email _req form__input " type="text" placeholder="Введите адрес электронной почты"/>
+                </div>
+            </div>
+            <div class="appeal">
+                <div class="page_form">
+                    <label for="">Органы исполнительной власти <span>*</span> </label>
+                    <select class="" name="" id="oiv" onchange="fill('topic', topics[this.selectedIndex])">
+                        <option selected disabled>ОИВ</option>
+                        <option value="script">Управление Скриптов</option>
+                        <option value="music">Управление Музыки</option>
+                        <option value="movie">Управление Фильмов</option>
+                    </select>
+                </div>
+
+                <div class="page_form">
+                    <label for="">Тема обращения <span>*</span></label>
+                    <select class="ad-form" name="name_topic" id="topic">
+                        <option selected disabled>Тема</option>
+                        <option value="">JavaScript</option>
+                        <option value="">Python</option>
+                        <option value="">C++</option>
+                        <option value="">Поп-музыка</option>
+                        <option value="">Рок-музыка</option>
+                        <option value="">Хип-Хоп</option>
+                        <option value="">Драма</option>
+                        <option value="">Комедия</option>
+                        <option value="">Ужасы</option>
+                        <option value="other_tems">Другая тема</option>
+                    </select>
+                </div>
+                    <div class="page_form ">
+                        <input type="text" name="additional" id="other" placeholder="Введите тему" hidden/>
+                    </div>
+
+
+
+                <div class="page_form ">
+                    <label for="">Текст жалобы <span>*</span></label>
+                    <textarea class="_req form__input" name="" id="" cols="68" rows="11"
+                              placeholder="Укажите причину обращения"></textarea>
+                </div>
+            </div>
+            <div class="form_btn">
+                <button class="btn">Отправить</button>
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
