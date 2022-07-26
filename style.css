@@ -61,7 +61,7 @@ input:hover {
 
 
 .form__input._error {
-    box-shadow: 0 0 15px red;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.66);
 }
 
 select {

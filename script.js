@@ -1,4 +1,4 @@
-"use strict"
+
 document.addEventListener('DOMContentLoaded', function () {
     const errors = {
         surname: false,
