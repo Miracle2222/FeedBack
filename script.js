@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
     elements.surnameData.addEventListener('input', function (event) {
         errors.surname = surnameTest(event.target)
         displayErrors()
-        console.log(surnameTest(event.target))
     })
 
     elements.nameData.addEventListener('input', function (event) {
