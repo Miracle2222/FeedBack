@@ -12,16 +12,31 @@
 <div class="page">
     <div class="form">
         <form action="" id="form" class="form__body">
+
             <h1>Отправить жалобу</h1>
+            <div data-errors class="form__error">
+                <h4>Ошибка!</h4>
+                <ul>
+                    <li data-error-surname>Фамилия должна начинаться с заглавной буквы, содержать русские буквы, может
+                        присутвовать девис ("-"), но не в начале и не в конце фамилии
+                    </li>
+                    <li data-error-name>Имя должно начинаться с заглавной буквы, содержать русские буквы, может
+                        присутвовать девис ("-"), но не в начале и не в конце имени
+                    </li>
+                    <li data-error-age>Обращающийся должен быть старше 18 лет</li>
+                    <li data-error-email>Адрес электронной почты должен быть в формате ***@****.***</li>
+                </ul>
+            </div>
             <p>Поля, отмеченные <span>*</span>, являются обязательными</p>
             <div class="client">
                 <div class="page_form">
                     <label for="">Фамилия <span>*</span></label>
-                    <input type="text" class="_surname _req form__input" placeholder="Введите фамилию"/>
+                    <input data-field-surname type="text" class="_surname _req form__input"
+                           placeholder="Введите фамилию"/>
                 </div>
                 <div class="page_form">
                     <label for="">Имя <span>*</span></label>
-                    <input class="_req form__input _name" type="text" placeholder="Введите имя"/>
+                    <input data-field-name class="_req form__input _name" type="text" placeholder="Введите имя"/>
                 </div>
                 <div class="page_form">
                     <label for="">Отчество (при наличии)</label>
@@ -29,54 +44,61 @@
                 </div>
                 <div class="page_form">
                     <label for="">Дата рождения <span>*</span></label>
-                    <input class="_req form__input _age " type="date" placeholder="Введите год рождения"/>
+                    <input data-field-date class="_req form__input _age " type="date"
+                           placeholder="Введите год рождения"/>
                 </div>
                 <div class="page_form">
                     <label for="">Адрес электронной почты <span>*</span> </label>
-                    <input class="_email _req form__input " type="text" placeholder="Введите адрес электронной почты"/>
+                    <input data-field-email class="_email _req form__input " type="text"
+                           placeholder="Введите адрес электронной почты"/>
                 </div>
             </div>
             <div class="appeal">
                 <div class="page_form">
                     <label for="">Органы исполнительной власти <span>*</span> </label>
-                    <select class="" name="" id="oiv" onchange="fill('topic', topics[this.selectedIndex])">
+                    <select data-select-1 class="" name="" id="oiv">
                         <option selected disabled>ОИВ</option>
-                        <option value="script">Управление Скриптов</option>
-                        <option value="music">Управление Музыки</option>
-                        <option value="movie">Управление Фильмов</option>
+                        <option value="script">ФСО</option>
+                        <option value="music">Министерство обороны</option>
+                        <option value="movie">Министерство здравоохранения</option>
                     </select>
                 </div>
-
                 <div class="page_form">
                     <label for="">Тема обращения <span>*</span></label>
-                    <select class="ad-form" name="name_topic" id="topic">
+                    <select data-select-2 class="ad-form" name="name_topic" id="topic">
                         <option selected disabled>Тема</option>
-                        <option value="">JavaScript</option>
-                        <option value="">Python</option>
-                        <option value="">C++</option>
-                        <option value="">Поп-музыка</option>
-                        <option value="">Рок-музыка</option>
-                        <option value="">Хип-Хоп</option>
-                        <option value="">Драма</option>
-                        <option value="">Комедия</option>
-                        <option value="">Ужасы</option>
-                        <option value="other_tems">Другая тема</option>
+                        <option data-theme data-theme-script value="javaScript">Требования к гражданам служащих по
+                            контракту
+                        </option>
+                        <option data-theme data-theme-script value="python">Заработная плата служащих по контракту
+                            контракту
+                        </option>
+                        <option data-theme data-theme-script value="c++">Правила территориального распределения служащих
+                            по контракту контракту
+                        </option>
+                        <option data-theme data-theme-music value="поп-музыка">Отпутск военослужащим по призыву</option>
+                        <option data-theme data-theme-music value="рок-музыка">Срочная служба</option>
+                        <option data-theme data-theme-music value="хип-хоп">Служба по контракту</option>
+                        <option data-theme data-theme-movie value="драма">Запись к врачу</option>
+                        <option data-theme data-theme-movie value="комедия">Диспансеризация</option>
+                        <option data-theme data-theme-movie value="ужасы">Госпитализация</option>
+                        <option value="other_themes">Другая тема</option>
                     </select>
                 </div>
-                    <div class="page_form ">
-                        <input type="text" name="additional" id="other" placeholder="Введите тему" hidden/>
-                    </div>
-
+                <div class="page_form ">
+                    <input data-input type="text" name="additional" id="other" placeholder="Введите тему"
+                           style='display: none'/>
+                </div>
 
 
                 <div class="page_form ">
                     <label for="">Текст жалобы <span>*</span></label>
-                    <textarea class="_req form__input" name="" id="" cols="68" rows="11"
+                    <textarea data-field-feedBack class="_req form__input" name="" id="" cols="68" rows="11"
                               placeholder="Укажите причину обращения"></textarea>
                 </div>
             </div>
             <div class="form_btn">
-                <button class="btn">Отправить</button>
+                <button data-form-button class="btn">Отправить</button>
             </div>
 
 
